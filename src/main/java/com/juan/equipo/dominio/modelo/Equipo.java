@@ -4,6 +4,9 @@ import lombok.Getter;
 
 import java.util.List;
 
+import static com.juan.equipo.dominio.utilidad.validacion.ValidacionCampos.validarObligatorio;
+import static com.juan.equipo.dominio.utilidad.validacion.ValidacionCampos.validarObligatorioNumero;
+
 @Getter
 public class Equipo {
 
@@ -17,16 +20,9 @@ public class Equipo {
         this.jugadores = jugadores;
     }
 
-    public static Equipo of(Integer id, String nombre){
-        validarObligatorio(id,"El campo no puede ser vacio");
+    public static Equipo of(Integer id, String nombre,List<Jugador> jugadores){
+        validarObligatorioNumero((id),"El campo no puede ser vacio");
         validarObligatorio(nombre,"El nombre debe ser obligatorio");
-        return new Equipo(id,nombre,null);
-    }
-
-
-    private static void validarObligatorio(Object valor, String mensaje) {
-        if (valor == null || valor.equals("")) {
-            throw new IllegalArgumentException(mensaje);
-        }
+        return new Equipo(id,nombre,jugadores);
     }
 }

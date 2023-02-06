@@ -1,4 +1,4 @@
-package com.juan.equipo.aplicacion.servicio;
+package com.juan.equipo.aplicacion.servicio.equipo;
 
 import com.juan.equipo.aplicacion.dto.DtoEquipo;
 import com.juan.equipo.aplicacion.dto.DtoRespuesta;
@@ -15,7 +15,7 @@ public class ServicioAplicacionGuardarEquipo {
     }
 
     public DtoRespuesta ejecutar(DtoEquipo dto){
-        Equipo equipo = Equipo.of(dto.getId(),dto.getNombre());
+        Equipo equipo = Equipo.of(dto.getId(),dto.getNombre(),dto.getJugadores());
         return new DtoRespuesta<>(servicioGuardarEquipo.ejecutar(equipo));
     }
 

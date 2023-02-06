@@ -1,5 +1,6 @@
 package com.juan.equipo.aplicacion.dto;
 
+import com.juan.equipo.dominio.modelo.Jugador;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,6 @@ public class DtoEquipo {
 
     private Integer id;
     private String nombre;
-    private List<DtoJugador> jugadores;
+    private List<Jugador> jugadores;
 
 }

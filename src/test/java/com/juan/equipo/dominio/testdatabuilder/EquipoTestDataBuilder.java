@@ -3,7 +3,7 @@ package com.juan.equipo.dominio.testdatabuilder;
 import com.juan.equipo.dominio.modelo.Equipo;
 
 public class EquipoTestDataBuilder {
-
+    /*
     private Integer id;
     private String nombre;
 
@@ -26,5 +26,6 @@ public class EquipoTestDataBuilder {
         return Equipo.of(id, nombre);
     }
 
+     */
 
 }
